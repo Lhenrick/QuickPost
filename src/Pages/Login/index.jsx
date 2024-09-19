@@ -14,7 +14,7 @@ export default function Login() {
                 <FormButton type="submit" text="Login" />
                 <p className="text-white">Still dont have an account? <a href="/register" className="text-yellow-400">click here</a></p>
             </form> */}
-            <UserForm/>
+            <UserForm btText={'Login'}/>
             <p className="text-white">Still dont have an account? <a href="/register" className="text-yellow-400">click here</a></p>
         </div>
     )

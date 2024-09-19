@@ -17,8 +17,8 @@ export default function Register(){
                 <FormButton type="submit" text="Create a new account"/>
                 <p className="text-white">Already have an account? <a href="/Login" className="text-yellow-400">Click here</a></p>            
             </form> */}
-            <UserForm/>
-            <p className="text-white">Already have an account? <a href="/Login" className="text-yellow-400">Click here</a></p>
+            <UserForm btText={'Register'}/>
+            <p className="text-white">Already have an account? <a href="/login" className="text-yellow-400">Click here</a></p>
         </div>
     )
 }
