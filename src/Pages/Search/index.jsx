@@ -1,5 +1,5 @@
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import Menu from "../../components/Menu";
 
 export default function Search() {
     return (
@@ -9,7 +9,7 @@ export default function Search() {
                 <h1 className="text-yellow-400 font-bold">Search for a title</h1>
                 <input type="text" className=" w-9/12 sm:w-80 md:w-80 lg:w-96 lg:h-8 rounded-xl pl-3" />
             </div>
-            <Footer />
+            <Menu />
         </>
     )
 }
