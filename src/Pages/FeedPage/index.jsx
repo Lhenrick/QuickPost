@@ -8,11 +8,9 @@ function FeedPage() {
 
 
   return (
-    <div className="h-screen w-screen bg-zinc-800">
+    <div className=" h-screen w-screen bg-zinc-800">
       <Header />
-        <div className="h-screen">
           <Feed />
-        </div>
       <Menu />
     </div>
   )

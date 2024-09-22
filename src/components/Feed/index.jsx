@@ -12,7 +12,7 @@ export default function Feed(){
     }
 
     return(
-        <section className="flex flex-col items-center p-5 gap-3 pb-3">
+        <section className="flex flex-col h-auto bg-zinc-800 items-center p-5 gap-3 pb-3">
             <PostInput onPostCreated={addNewPost}/>
             {data.map((info) => (
                 <Post key={info.title} data={info}/>
