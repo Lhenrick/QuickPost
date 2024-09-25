@@ -1,8 +1,6 @@
 import AuthenticationLogo from "../../components/AuthenticationLogo";
 import UserForm from "../../components/UserForm";
-// import EmailInput from "../../components/EmailInput";
-// import FormButton from "../../components/FormButton";
-// import PasswordInput from "../../components/PasswordInput";
+
 
 export default function Login() {
     return (

@@ -1,5 +1,3 @@
-
- 
 import { useState } from "react"
 import NewPost from "../Post/newPost";
 
@@ -11,7 +9,7 @@ export default function PostInput({onPostCreated}) {
 
     const[text, setText] = useState('');
     const[title, setTitle] = useState('');
-    const[characters, setCharacters] =useState(4000);
+    const[characters, setCharacters] = useState(4000);
 
     const handleTextChange = (e) =>{
         setText(e.target.value)
