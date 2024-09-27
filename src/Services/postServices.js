@@ -7,6 +7,17 @@ async function getPosts() {
     return response.data
 }
 
-export{
-    getPosts
+
+
+async function createPost(content){
+    const response = await postsAPI.post('/', content);
+    console.log(response)
+
+}
+
+
+
+export {
+    getPosts,
+    createPost
 }

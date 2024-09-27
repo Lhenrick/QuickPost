@@ -1,9 +1,6 @@
 import { useState } from "react"
 import NewPost from "../Post/newPost";
-
-
-
-
+import { createPost } from "../../Services/postServices";
 
 export default function PostInput({onPostCreated}) {
 
@@ -12,20 +9,24 @@ export default function PostInput({onPostCreated}) {
     const[characters, setCharacters] = useState(4000);
 
     const handleTextChange = (e) =>{
-        setText(e.target.value)
-        setCharacters(characters - 1) 
+        const text = e.target.value;
+        setText(text)
+        setCharacters(4000 - e.target.value.length)
+        console.log(e.target.value.length) 
         // figure out a way to make it recover the value if I delete something
     }
 
 
     const handleTitleChange = (e) =>{
         setTitle(e.target.value)
+       
     }
 
     const makePost = (e) => {
         e.preventDefault()
         const newPost = new NewPost(title, text)
-        onPostCreated(newPost)        
+        createPost(newPost)
+                
     }
 
     return (
@@ -35,7 +36,7 @@ export default function PostInput({onPostCreated}) {
             <textarea onChange={handleTextChange} name="NewPost" required maxLength={4000} placeholder="What's on your mind today?" className=" h-32 w-full text-white rounded-xl border-2 border-yellow-400 p-3 bg-zinc-900" />
             <div className="flex w-full justify-between mt-2">
                 <p className="text-xs sm:text-sm md:text-md lg:text-lg text-white"> {characters} characters available</p>
-                <button onClick={makePost} className="w-4/12 md:w-1/6 lg:w-2/12 bg-yellow-400 rounded-xl  p-3">Post</button>
+                <button onClick={makePost} className="w-4/12 md:w-1/6 lg:w-2/12 bg-yellow-400 rounded-xl p-3 hover:animate-pulse hover:bg-yellow-200">Post</button>
             </div>
         </form>
     )

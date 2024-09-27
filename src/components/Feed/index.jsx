@@ -11,11 +11,12 @@ export default function Feed(){
     
     useEffect(()=>{
         fetchPosts()
-    }, [])
+    }, [data])
 
     async function fetchPosts (){
-        const  postsAPI = await getPosts();
-        setData(postsAPI)
+        const postsAPI = await getPosts();
+        const sortedData = postsAPI.reverse();
+        setData(sortedData)
     }
 
     const addNewPost = (newPost) => {
