@@ -7,7 +7,7 @@ import { getPosts } from "../../Services/postServices";
 export default function Feed(){
 
     const [data, setData] = useState([])
-    const [test, setTest] = useState([])
+
     
     useEffect(()=>{
         fetchPosts()
@@ -18,18 +18,11 @@ export default function Feed(){
         const sortedData = postsAPI.reverse();
         setData(sortedData)
     }
-
-    const addNewPost = (newPost) => {
-        setTest((prevPost) => [...prevPost, newPost])
-
-        // function not working anymore because, not the api is not hard coded
-    }
-
-    
+  
     
     return(
         <section className="flex flex-col h-auto bg-zinc-800 items-center p-5 gap-3 pb-3">
-            <PostInput onPostCreated={addNewPost}/>
+            <PostInput />
             {data.map((info) => (
                 <Post key={info.title} data={info}/>
                 ))}

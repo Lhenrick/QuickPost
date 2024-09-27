@@ -7,17 +7,23 @@ async function getPosts() {
     return response.data
 }
 
-
-
 async function createPost(content){
-    const response = await postsAPI.post('/', content);
-    console.log(response)
+     await postsAPI.post('/', content);
 
 }
+
+async function searchPost(title){
+    const response = await postsAPI.get(`/`)
+    const filtered = response.data.filter(post => post.title.includes(title))
+    return filtered
+           
+}
+
 
 
 
 export {
     getPosts,
-    createPost
+    createPost,
+    searchPost
 }

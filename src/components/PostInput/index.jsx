@@ -2,7 +2,7 @@ import { useState } from "react"
 import NewPost from "../Post/newPost";
 import { createPost } from "../../Services/postServices";
 
-export default function PostInput({onPostCreated}) {
+export default function PostInput() {
 
     const[text, setText] = useState('');
     const[title, setTitle] = useState('');
@@ -11,9 +11,7 @@ export default function PostInput({onPostCreated}) {
     const handleTextChange = (e) =>{
         const text = e.target.value;
         setText(text)
-        setCharacters(4000 - e.target.value.length)
-        console.log(e.target.value.length) 
-        // figure out a way to make it recover the value if I delete something
+        setCharacters(4000 - e.target.value.length) 
     }
 
 
