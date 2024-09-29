@@ -10,7 +10,8 @@ export default function Pages() {
     return (
         <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<FeedPage />} />
+                    <Route path="/" element={<Login />} />
+                    <Route path="/home" element={<FeedPage />} />
                     <Route path="*" element={<NotFound />}/>
                     <Route path="/search" element={<Search/>}/>
                     <Route path="/register" element={<Register/>}/>

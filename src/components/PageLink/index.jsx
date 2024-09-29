@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 
 
-// eslint-disable-next-line react/prop-types
-export default function PageLink({children, to}){
-    return(
-        <Link to={to}>{children}</Link>
+
+export default function PageLink({ children, to }) {
+    return (
+
+        <Link to={to}>
+            <div className="flex flex-col items-center">
+                {children}
+            </div>
+        </Link>
+
     )
 }
