@@ -26,8 +26,7 @@ export default function PostInput() {
         e.preventDefault()
         const newPost = new NewPost(title, text)
         createPost(newPost)
-        setTitle('')
-        setText('')
+        
                 
     }
 

@@ -12,7 +12,7 @@ export default function Menu() {
                 </PageLink>
             </li>
             <li className="flex flex-col items-center border-2 border-zinc-900 p-2 rounded-full hover:bg-zinc-700 shadow-lg shadow-black hover:animate-pulse">
-                <PageLink to={"/"}>
+                <PageLink to={"/home"}>
                     <FaHome />
                     <span>Home</span>
                 </PageLink>

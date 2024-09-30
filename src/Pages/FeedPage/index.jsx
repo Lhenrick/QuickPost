@@ -11,8 +11,7 @@ function FeedPage() {
     <div className=" h-auto min-h-screen w-screen bg-zinc-800">
       <Header />
       <Feed />
-      <Menu />
-      
+      <Menu />     
     </div>
   )
 }
