@@ -4,6 +4,7 @@ import Search from "./Pages/Search";
 import Register from "./Pages/Register";
 import FeedPage from "./Pages/FeedPage";
 import Login from "./Pages/Login";
+import Profile from "./Pages/User";
 
 
 export default function Pages() {
@@ -16,6 +17,7 @@ export default function Pages() {
                     <Route path="/search" element={<Search/>}/>
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/login" element={<Login/>}/>
+                    <Route path="/profile" element={<Profile/>}/>
                 </Routes>
         </BrowserRouter>
     )
