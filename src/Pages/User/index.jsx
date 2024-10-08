@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import Menu from "../../components/Menu";
-import ProfileInfo from "../../components/userInfo";
+import ProfileInfo from "../../components/profileInfo";
 
 
 export default function Profile(){

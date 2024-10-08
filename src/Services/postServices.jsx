@@ -13,8 +13,15 @@ async function createPost(content){
 }
 
 async function searchPost(title){
-    const response = await postsAPI.get(`/`)
+    const response = await postsAPI.get('/')
     const filtered = response.data.filter(post => post.title.includes(title))
+    return filtered
+           
+}
+
+async function userPosts(id){
+    const response = await postsAPI.get('/')
+    const filtered = response.data.filter(post => post.userId.includes(id))
     return filtered
            
 }
@@ -25,5 +32,6 @@ async function searchPost(title){
 export {
     getPosts,
     createPost,
-    searchPost
+    searchPost,
+    userPosts
 }

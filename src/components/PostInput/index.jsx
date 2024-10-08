@@ -1,6 +1,7 @@
 import { useState } from "react"
 import NewPost from "../Post/newPost";
 import { createPost } from "../../Services/postServices";
+import { fetchProfile } from "../../Services/userServices";
 
 export default function PostInput() {
 
@@ -22,10 +23,19 @@ export default function PostInput() {
        
     }
 
-    const makePost = (e) => {
+    async function getUserData(){
+        const userData = await fetchProfile();
+        return userData;
+      
+      }
+
+    const makePost = async (e) => {
         e.preventDefault()
-        const newPost = new NewPost(title, text)
-        createPost(newPost)
+        const userData = await getUserData();
+        const userId = userData._id;
+        const username = userData.username
+        const newPost = new NewPost(title, text, userId, username);
+        await createPost(newPost);
         
                 
     }

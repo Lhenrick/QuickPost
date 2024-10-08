@@ -13,6 +13,7 @@ export default function Feed() {
         fetchPosts()
     }, [data])
 
+    // get all posts from the database and print on the page.
     async function fetchPosts() {
         const postsAPI = await getPosts();
         const sortedData = postsAPI.reverse();
