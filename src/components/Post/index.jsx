@@ -14,13 +14,13 @@ export default function Post({data}) {
                     {data.message}
                     </p>
                 </div>
-                <div className="flex items-center mt-2 ">
+                <div className="flex justify-between mt-2 ">
                 <span className="flex text-3xl text-yellow-400">
                     <AiOutlineLike />
                     <BiLaugh />
                     <AiOutlineDislike />
                 </span>
-                <span className="self-center text-2xl">
+                <span className="text-2xl">
                     @{data.username}    
                 </span>
                 </div>            
