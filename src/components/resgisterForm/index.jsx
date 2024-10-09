@@ -14,6 +14,7 @@ export default function RegisterForm({btText}){
         
         const newUser = new User(username, email, password);
         registerUser(newUser)
+        window.location.replace("http://localhost:5173/login");
            
         
     }

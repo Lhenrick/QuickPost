@@ -24,8 +24,9 @@ export default function ProfileInfo() {
     
      useEffect(() =>{
     async function fetchPosts(user){
-        const posts = await userPosts(user);   
-        setPost(posts);
+        const posts = await userPosts(user);
+        const sortedPosts = posts.reverse();
+        setPost(sortedPosts);
     }
     fetchPosts(userId);
 
@@ -37,17 +38,17 @@ export default function ProfileInfo() {
     return (
         <div className="flex flex-col min-h-screen h-auto items-center my-10">
             <div className="size-72">
-                <img src="./profileexe.jpeg" className=" rounded-full border-4 border-yellow-400" />
+                <img src="./quick.jpeg" loading="lazy" className=" rounded-full border-4 border-yellow-400" />
             </div>
             <h2 className="text-white font-extrabold text-4xl">
                 @{user.username}
             </h2>
             <p className="text-white font-semibold">
-                your email: {user.email}
+                {user.email}
             </p>
-            <hr className="w-screen h-5 m-3 bg-yellow-400">
+            <hr className="w-screen h-5 m-3 border-none bg-yellow-400">
             </hr>
-            <section className="mt-24 size-3/6">
+            <section className="mt-10 size-3/6">
                 <h3 className="text-white text-center mb-3 font-bold text-4xl">
                     Your QuickPosts
                 </h3>

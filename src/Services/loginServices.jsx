@@ -4,11 +4,11 @@ const userLogin = axios.create({ baseURL: 'http://localhost:8000/login', withCre
 
 async function login(data) {
     try {
-
         const response = await userLogin.post('/', data, { withCredentials: true});
 
-            console.log('you are logged in!', response.data);
-            return true;
+        localStorage.setItem('authToken', response.data.token);
+                   
+        return true;
         
 
     } catch (error) {

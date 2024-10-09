@@ -4,7 +4,8 @@ import Search from "./Pages/Search";
 import Register from "./Pages/Register";
 import FeedPage from "./Pages/FeedPage";
 import Login from "./Pages/Login";
-import Profile from "./Pages/User";
+import Profile from "./Pages/Profile";
+import PrivateRoute from "./Pages/PrivateRoute";
 
 
 export default function Pages() {
@@ -12,12 +13,12 @@ export default function Pages() {
         <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Login />} />
-                    <Route path="/home" element={<FeedPage />} />
-                    <Route path="*" element={<NotFound />}/>
-                    <Route path="/search" element={<Search/>}/>
-                    <Route path="/register" element={<Register/>}/>
                     <Route path="/login" element={<Login/>}/>
-                    <Route path="/profile" element={<Profile/>}/>
+                    <Route path="/register" element={<Register/>}/>
+                    <Route path="/home" element={<PrivateRoute element={FeedPage}/>} />
+                    <Route path="/search" element={<PrivateRoute element={Search}/>}/>
+                    <Route path="/profile" element={<PrivateRoute element={Profile}/>}/>
+                    <Route path="*" element={<PrivateRoute element={NotFound}/>}/>
                 </Routes>
         </BrowserRouter>
     )

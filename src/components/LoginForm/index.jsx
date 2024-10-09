@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { login } from "../../Services/loginServices";
 
 
 
 export default function LoginForm({ btText }) {
+
+    const navigate = useNavigate();
 
     function getInfo(event) {
         event.preventDefault()
@@ -14,8 +17,8 @@ export default function LoginForm({ btText }) {
         login(loginInfo).then((logged) => {
 
             if (logged) {
-
-                window.location.replace("http://localhost:5173/home");
+            
+            navigate("/home");
 
             } else {
                 alert('Your email or password is wrong!')

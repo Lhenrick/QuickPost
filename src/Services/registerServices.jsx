@@ -4,9 +4,11 @@ const usersRegistered = axios.create({baseURL:'http://localhost:8000/users'});
 
 async function registerUser(data){
 
-    await usersRegistered.post('/', data );
-    console.log('New account successfully created!');
-
+    try {
+        await usersRegistered.post('/', data );
+    }catch(error){
+        alert(`Something went wrong: ${error}`)
+    }
 }
 
 export {

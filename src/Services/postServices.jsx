@@ -14,7 +14,7 @@ async function createPost(content) {
 
 async function searchPost(title) {
     const response = await postsAPI.get('/');
-    const filtered = response.data.filter(post => post.title.includes(title));
+    const filtered = response.data.filter(post => post.title.toUpperCase().includes(title));
     return filtered;
 
 }
