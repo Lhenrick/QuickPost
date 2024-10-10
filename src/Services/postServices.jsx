@@ -12,13 +12,14 @@ async function createPost(content) {
 
 }
 
-async function searchPost(title) {
+async function searchPost(search) {
+
     const response = await postsAPI.get('/');
-    const filtered = response.data.filter(post => post.title.toUpperCase().includes(title));
-    return filtered;
+    const filtered = response.data.filter(post => post.title.toUpperCase().includes(search) || post.username.toUpperCase().includes(search));
+    const sorted = filtered.reverse()
+    return sorted;
 
 }
-
 
 // get the all user's posts by it's id
 async function userPosts(id) {

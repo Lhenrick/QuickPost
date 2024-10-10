@@ -6,8 +6,7 @@ import { getPosts } from "../../Services/postServices";
 
 export default function Feed() {
 
-    const [data, setData] = useState([])
-
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         fetchPosts()
