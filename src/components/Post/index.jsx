@@ -16,7 +16,7 @@ export default function Post({data}) {
                 </div>
                 <div className="flex items-center justify-between mt-1 ">
                 {/* <span className="flex text-2xl text-yellow-400"> <AiOutlineLike /> <BiLaugh /> <AiOutlineDislike /> </span> */}
-                <span className="text-xl">
+                <span className="text-xl text-yellow-400">
                     @{data.username}    
                 </span>
                 <p className="text-xs">{data.time} - {data.date}</p>
