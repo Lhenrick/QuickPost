@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const userInfo = axios.create({baseURL:'http://localhost:8000/profile'});
+const userInfo = axios.create({baseURL:'https://quickpost-server-three.vercel.app/profile'});
 
 
 async function fetchProfile() {

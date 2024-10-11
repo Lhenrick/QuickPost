@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const usersRegistered = axios.create({ baseURL: 'http://localhost:8000/users' });
+const usersRegistered = axios.create({ baseURL: 'https://quickpost-server-three.vercel.app/users' });
 
 async function registerUser(data) {
 
