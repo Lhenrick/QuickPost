@@ -36,15 +36,14 @@ Welcome to QuickPost! This is a social media application that allows users to po
 
     ```bash
     npm install
-
+    ```
 
 ### Running the Application
 
-1.Start the frontend development server:
-
+1. Start the frontend development server:
     ```bash
     npm run dev
-    ```
+     ```
 
 2. Open your browser and navigate to `http://localhost:3000` to use the application.
 
