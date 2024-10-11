@@ -13,19 +13,23 @@ export default function LoginForm({ btText }) {
         const password = event.target[1].value;
         const loginInfo = { email, password };
 
-
-        login(loginInfo).then((logged) => {
+        
+       try{ login(loginInfo).then((logged) => {
 
             if(logged) {
             
-            navigate("/home");
+            navigate("/QuickPost/home");
 
             } else {
-                alert('Your email or password is wrong!')
+                alert("Your email or password is wrong!");
             }
-        });
+        })}catch(error){
+            alert("Something wrong with the server, try again later.");
+        }
 
     }
+
+    
 
     return (
         <form onSubmit={getInfo} className="flex flex-col items-center md:w-2/6 lg:w-2/6 gap-3">

@@ -156,7 +156,7 @@ export default function RegisterForm({ btText }) {
             if (created) {
 
                 alert("Account successfully created!");
-                navigate("/login");
+                navigate("/QuickPost/login");
 
             } else {
                 alert("Error trying to create an account");

@@ -83,7 +83,7 @@ export default function PostInput() {
             {textError && <p className="text-red-500">{textError}</p>}
             {titleError && <p className="text-red-500">{titleError}</p>}
             <div className="flex flex-col sm:flex-row w-full justify-between mt-2">
-                <p className="text-sm my-2 md:text-md lg:text-lg text-white"> {characters} characters available</p>
+                <p className="text-sm md:text-md lg:text-lg text-white"> {characters} characters available</p>
                 <button onClick={makePost} className=" w-full h-8 py-1 sm:w-4/12 md:w-1/6 lg:w-2/12 bg-yellow-400 rounded-xl  hover:animate-pulse hover:bg-yellow-200">Post</button>
             </div>
         </form>

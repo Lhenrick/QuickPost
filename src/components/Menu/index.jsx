@@ -10,29 +10,29 @@ export default function Menu() {
 
     function logoff(){
         localStorage.removeItem('authToken');
-        navigate('/login')
+        navigate('/QuickPost/login')
     }
 
 
     return (
         <menu className="flex justify-center sticky inset-0 w-full  py-2 bg-zinc-900 text-white gap-3">
             <li className="flex flex-col items-center border-2 border-zinc-900 p-2 rounded-full hover:bg-zinc-700 shadow-lg shadow-black hover:animate-pulse">
-                <PageLink to={"/search"}>
+                <PageLink to={"/QuickPost/search"}>
                     <FaSearch className="size-8"/>   
                 </PageLink>
             </li>
             <li className="flex flex-col items-center border-2 border-zinc-900 p-2 rounded-full hover:bg-zinc-700 shadow-lg shadow-black hover:animate-pulse">
-                <PageLink to={"/home"}>
+                <PageLink to={"/QuickPost/home"}>
                     <FaHome className="size-8"/>        
                 </PageLink>
             </li>
             <li className="flex flex-col items-center border-2 border-zinc-900 p-2 rounded-full hover:bg-zinc-700 shadow-lg shadow-black hover:animate-pulse">
-                <PageLink to="/profile">
+                <PageLink to="/QuickPost/profile">
                     <FaUser className="size-8"/>                  
                 </PageLink>
             </li>
             <li className="flex flex-col items-center border-2 border-zinc-900 p-2 rounded-full hover:bg-zinc-700 shadow-lg shadow-black hover:animate-pulse">
-                <PageLink to="/login">
+                <PageLink to="/QuickPost/login">
                     <ImExit onClick={logoff} className="size-8"/>                  
                 </PageLink>
             </li>
