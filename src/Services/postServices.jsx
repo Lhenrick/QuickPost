@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const postsAPI = axios.create({ baseURL: 'https://quickpost-server-three.vercel.app/posts' });
+const postsAPI = axios.create({ baseURL: 'https://quickpost-server-git-main-lhenricks-projects.vercel.app/posts' });
 
 async function getPosts() {
     const response = await postsAPI.get('/');
