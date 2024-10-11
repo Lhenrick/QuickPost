@@ -7,7 +7,7 @@ import { useState } from "react";
 import { IoMdFemale, IoMdMale, IoMdTransgender } from "react-icons/io";
 import CountriesDropDown from "../ContriesDropDown";
 import RegisterInput from "../ResgisterInput";
-import GenderRadio from "../genderRadio";
+import GenderRadio from "../GenderRadio";
 
 
 
