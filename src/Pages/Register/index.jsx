@@ -14,7 +14,7 @@ export default function Register() {
             </div>
             <Logo/>
             <RegisterForm btText={'Register'} />
-            <p className="text-white">Already have an account? <a href="/login" className="text-yellow-400">Click here</a></p>
+            <p className="text-white">Already have an account? <a href="/QuickPost/login" className="text-yellow-400">Click here</a></p>
         </div>
     )
 }

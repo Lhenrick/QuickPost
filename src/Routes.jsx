@@ -13,11 +13,11 @@ export default function Pages() {
         <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Login />} />
-                    <Route path="/login" element={<Login/>}/>
-                    <Route path="/register" element={<Register/>}/>
-                    <Route path="/home" element={<PrivateRoute element={FeedPage}/>} />
-                    <Route path="/search" element={<PrivateRoute element={Search}/>}/>
-                    <Route path="/profile" element={<PrivateRoute element={Profile}/>}/>
+                    <Route path="/QuickPost/login" element={<Login/>}/>
+                    <Route path="/QuickPost/register" element={<Register/>}/>
+                    <Route path="/QuickPost/home" element={<PrivateRoute element={FeedPage}/>} />
+                    <Route path="/QuickPost/search" element={<PrivateRoute element={Search}/>}/>
+                    <Route path="/QuickPost/profile" element={<PrivateRoute element={Profile}/>}/>
                     <Route path="*" element={<PrivateRoute element={NotFound}/>}/>
                 </Routes>
         </BrowserRouter>
