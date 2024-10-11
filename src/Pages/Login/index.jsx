@@ -1,5 +1,6 @@
 import Logo from "../../components/Logo";
 import LoginForm from "../../components/LoginForm";
+import { Link } from "react-router-dom";
 
 
 export default function Login() {
@@ -12,7 +13,7 @@ export default function Login() {
             <h2 className="font-bold text-white text-4xl animate-pulse">🌍</h2>
             <Logo />
             <LoginForm btText={'Login'}/>
-            <p className="text-white">Still dont have an account? <a href="/QuickPost/register" className=" text-yellow-400">click here</a></p>
+            <p className="mt-2 text-white">Still dont have an account? <Link to="/QuickPost/register" className=" text-yellow-400">Click here</Link></p>
         </div>
     )
 }

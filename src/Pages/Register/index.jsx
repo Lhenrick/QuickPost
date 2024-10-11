@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../../components/Logo";
 import RegisterForm from "../../components/resgisterForm";
 
@@ -14,7 +15,7 @@ export default function Register() {
             </div>
             <Logo/>
             <RegisterForm btText={'Register'} />
-            <p className="text-white">Already have an account? <a href="/QuickPost/login" className="text-yellow-400">Click here</a></p>
+            <p className="mt-2 text-white">Already have an account? <Link to="/QuickPost/login" className="text-yellow-400">Click here</Link></p>
         </div>
     )
 }

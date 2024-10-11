@@ -39,6 +39,6 @@ export const PrivateRoute = ({component: component, ...rest}) => {
     const { authToken } = useAuth();
 
     return(
-        <Route {...rest} render={props => authToken? (<Comment {...props}/>) : (<Redirect to="QuickPost/login"/>)} />
+        <Route {...rest} render={props => authToken? (<Comment {...props}/>) : (<Redirect to="/QuickPost/login"/>)} />
     )
 }
