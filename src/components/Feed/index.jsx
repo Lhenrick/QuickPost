@@ -20,7 +20,7 @@ export default function Feed() {
     }
 
     return (
-        <section className="flex flex-col h-auto bg-zinc-800 items-center p-5 gap-3 pb-3">
+        <section className="flex flex-col min-h-screen h-auto bg-gradient-to-br from-yellow-300 via-neutral-800 to-neutral-900 items-center p-5 gap-3 pb-3">
             <PostInput />
             <div className="mt-5 gap-5 grid justify-items-center grid-cols-1 sm:grid-cols-2 auto-rows-auto">
                 {data.map((info) => (

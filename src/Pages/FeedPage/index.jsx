@@ -8,7 +8,7 @@ function FeedPage() {
 
 
   return (
-    <div className=" h-auto min-h-screen w-screen bg-zinc-800">
+    <div className=" h-auto min-h-screen max-w-screen bg-zinc-800">
       <Header />
       <Feed />
       <Menu />     
