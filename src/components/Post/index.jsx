@@ -9,13 +9,13 @@ export default function Post({data}) {
                 <h3 className="font-bold text-base sm:text-base md:text-xl self-center">
                     {data.title}
                 </h3>
-                <div className="w-11/12 min-h-28 max-h-32 overflow-y-scroll no-scrollbar ">
+                <div className="w-11/12 h-32 overflow-y-scroll no-scrollbar ">
                     <p>
                     {data.message}
                     </p>
                 </div>
                 <div className="flex items-center justify-between mt-1 ">
-                {/* <span className="flex text-2xl text-yellow-400"> <AiOutlineLike /> <BiLaugh /> <AiOutlineDislike /> </span> future reactions*/}
+                {/* <span className="flex text-2xl text-yellow-400"> <AiOutlineLike /> <BiLaugh /> <AiOutlineDislike /> </span> future reactions //future reactions */}
                 <span className="text-xl text-yellow-400">
                     @{data.username}    
                 </span>

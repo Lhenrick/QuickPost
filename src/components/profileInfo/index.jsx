@@ -44,8 +44,6 @@ export default function ProfileInfo() {
             <p className="text-white font-semibold">
                 {user.email}
             </p>
-            <hr className="max-w-screen h-5 m-3 border-none bg-zinc-600">
-            </hr>
             <section className="mt-10 size-5/6 md:size-3/6">
                 <h3 className="text-white text-center mb-3 font-bold text-2xl sm:text-4xl">
                     Your QuickPosts

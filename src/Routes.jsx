@@ -21,6 +21,6 @@ export default function Pages() {
                     <Route path="/QuickPost/profile" element={<PrivateRoute element={Profile} />} />
                     <Route path="*" element={<PrivateRoute element={NotFound} />} />
                 </Routes>
-            </BrowserRouter>
+            </BrowserRouter> 
     )
 }
