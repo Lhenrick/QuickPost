@@ -2,8 +2,8 @@
 
 Welcome to QuickPost! This is a social media application that allows users to post text content.
 <div display="flex" align="center" >
-    <img loading="lazy" width="50%" height="60%" src=".assets/images/login-ptr.png"/>
-    <img loading="lazy" width="50%" height="60%" src=".assets/images/home-ptr.png"/>
+    <img loading="lazy" width="50%" height="50%" src="./public/assets/images/login-ptr.png"/>
+    <img loading="lazy" width="50%" height="50%" src="./public/assets/images/home-ptr.png"/>
 </div>
 
 ## Features
