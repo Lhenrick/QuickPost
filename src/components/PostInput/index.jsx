@@ -74,7 +74,7 @@ export default function PostInput() {
     }
 
     return (
-        <form className="flex flex-col items-center gap-y-0.5 pt-3 w-8/12 lg:w-6/12">
+        <form className="flex flex-col  items-center gap-y-0.5 pt-3 w-8/12 lg:w-6/12">
             <p className="text-white text-3xl font-semibold">Make a quick post...</p>
             <div className={`p-2 bg-zinc-900 border-2  rounded-xl w-full ${textError ? "border-red-500" : "border-yellow-400"}`}>
                 <input onChange={handleTitleChange} id='titleInput' value={title} placeholder="Title" required maxLength={30} className={` text-white border-b-2 bg-zinc-900 w-full px-4 focus:outline-none ${titleError ? "border-red-500" : "border-yellow-400"} `} />
