@@ -44,7 +44,15 @@ export default function ProfileInfo() {
         <h2 className="text-white font-extrabold text-5xl">@{user.username}</h2>
         <p className="text-white font-semibold">{user.email}</p>
       </div>
-      <Skills />
+
+      {/* All User's skills */}
+      <section className="flex flex-col items-start">
+        <Skills skillName="Strength" />
+        <Skills skillName="Programming" />
+        <Skills skillName="Guitar" />
+        <Skills skillName="Cooking" />
+      </section>
+
       <section className="mt-10 size-5/6 md:size-3/6">
         {post.length == 0 ? (
           <h3 className="text-white text-center mb-3 font-bold text-2xl sm:text-4xl">
